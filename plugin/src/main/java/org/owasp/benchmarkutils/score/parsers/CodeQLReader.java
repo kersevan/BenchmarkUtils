@@ -177,8 +177,9 @@ public class CodeQLReader extends Reader {
                             "WARNING: Unexpectedly found more than one location for finding against rule: "
                                     + ruleId);
                 }
-                int cwe = mapCWE(ruleId, cweForRule);
-                tcr.setCWE(cwe);
+                // int cwe = mapCWE(ruleId, cweForRule);
+                // tcr.setCWE(cwe);
+                tcr.setCWE(cweForRule);
                 // tcr.setCategory( props.getString( "subcategoryShortDescription" ) ); //
                 // Couldn't find any Category info in results file
                 tcr.setEvidence(finding.getJSONObject("message").getString("text"));
